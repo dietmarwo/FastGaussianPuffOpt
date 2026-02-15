@@ -1,4 +1,5 @@
 # Sensor Optimization: FastGaussianPuff + fcmaes + Optuna Dashboard
+image::logo.gif[]
 
 This project demonstrates how to solve a physics-based **Inverse Design Problem**—optimizing the placement of methane sensors—using two different optimization strategies. 
 
@@ -38,6 +39,13 @@ This is the core innovation of this repository. It is a custom wrapper that allo
 | `opt_fcmaes_j.py` | **Accelerated Optimization.** Runs the problem using `fcmaes` wrapped in `journal.py` for dashboard compatibility. |
 | `GaussianPuff.py` | Python wrapper for the C++ physics engine. |
 | `CGaussianPuff.cpp` | The core C++ physics implementation (must be compiled). |
+
+
+### Optuna Dashboard / Optuna Optimizer
+image::optuna.png[]
+
+### Optuna Dashboard / fcmaes Optimizer
+image::fcmaes.png[]
 
 ## 🛠️ Installation
 
