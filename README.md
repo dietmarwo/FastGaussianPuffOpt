@@ -1,5 +1,5 @@
 # Sensor Optimization: FastGaussianPuff + fcmaes + Optuna Dashboard
-image::logo.gif[]
+img::logo.gif[]
 
 This project demonstrates how to solve a physics-based **Inverse Design Problem**—optimizing the placement of methane sensors—using two different optimization strategies. 
 
@@ -27,7 +27,7 @@ This is the core innovation of this repository. It is a custom wrapper that allo
 
 ### 3. Optimizer Comparison
 * **Standard:** `optuna` (TPE Sampler) - Good for general hyperparameters, but slower on mathematical functions.
-* **Accelerated:** `fcmaes` (BiteOpt/CMA-ES) - Excellent for continuous optimization problems, robust against local minima, and utilizes native C++ multi-threading.
+* **Accelerated:** `fcmaes` (BiteOpt/CMA-ES) - Excellent for continuous optimization problems, robust against local minima, and better utilizes Python multi-processing.
 
 ## 📂 File Structure
 
@@ -36,16 +36,16 @@ This is the core innovation of this repository. It is a custom wrapper that allo
 | `puff_simulation.py` | **The Simulation Engine.** Sets up the wind data, source location, and ground truth. Defines `is_valid(x,y,z)` for geometric constraints. |
 | `journal.py` | **The Bridge.** A custom logging wrapper that translates `fcmaes` events into Optuna Journal format. Handles `inf` pruning. |
 | `opt_optuna.py` | **Baseline Optimization.** Runs the problem using standard Optuna TPE. |
-| `opt_fcmaes_j.py` | **Accelerated Optimization.** Runs the problem using `fcmaes` wrapped in `journal.py` for dashboard compatibility. |
-| `GaussianPuff.py` | Python wrapper for the C++ physics engine. |
-| `CGaussianPuff.cpp` | The core C++ physics implementation (must be compiled). |
+| `opt_optuna_j.py` | **Baseline Optimization + Journal.** Runs the problem using standard Optuna TPE. |
+| `opt_fcmaes_j.py` | **Accelerated Optimization.**  Runs the problem using `fcmaes`. |
+| `opt_fcmaes_j.py` | **Accelerated Optimization + Journal.** Runs the problem using `fcmaes` wrapped in `journal.py` for dashboard compatibility. |
 
 
 ### Optuna Dashboard / Optuna Optimizer
-image::optuna.png[]
+img::optuna.png[]
 
 ### Optuna Dashboard / fcmaes Optimizer
-image::fcmaes.png[]
+img::fcmaes.png[]
 
 ## 🛠️ Installation
 
