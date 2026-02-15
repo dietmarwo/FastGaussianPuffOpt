@@ -41,17 +41,24 @@ This is the core innovation of this repository. It is a custom wrapper that allo
 
 ## 🛠️ Installation
 
-### 1. Requirements
-* Python 3.8+
-* C++ Compiler (GCC/Clang/MSVC) for the physics engine.
+### 1. Prerequisites
+To run the `opt_` files, you must install the following core packages:
+
+* **FastGaussianPuff**: The physics engine is mandatory. Clone and install it from the Hammerling Research Group repository:
+    * [https://github.com/Hammerling-Research-Group/FastGaussianPuff](https://github.com/Hammerling-Research-Group/FastGaussianPuff)
+* **Optuna**: The optimization framework used for the baseline and journal storage.
+    * [https://optuna.org/](https://optuna.org/)
+* **Optuna Dashboard**: The real-time visualization tool.
+    * [https://github.com/optuna/optuna-dashboard](https://github.com/optuna/optuna-dashboard)
+* **fcmaes**: The high-performance optimization library.
+    * [https://github.com/dietmarwo/fast-cma-es](https://github.com/dietmarwo/fast-cma-es)
 
 ### 2. Install Python Dependencies
+Once the prerequisites above are addressed (specifically `FastGaussianPuff`, which requires C++ compilation), install the remaining Python dependencies:
+
 ```bash
 pip install numpy pandas scipy optuna optuna-dashboard loguru fcmaes
 ```
-
-### 3. Compile the Physics Engine
-*Ensure `CGaussianPuff.cpp` is compiled into a Python extension module (`FastGaussianPuff`).*
 
 ## 🏃 Usage
 
