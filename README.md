@@ -40,8 +40,10 @@ This is the core innovation of this repository. It is a custom wrapper that allo
 | `opt_fcmaes_j.py` | **Accelerated Optimization.**  Runs the problem using `fcmaes`. |
 | `opt_fcmaes_j.py` | **Accelerated Optimization + Journal.** Runs the problem using `fcmaes` wrapped in `journal.py` for dashboard compatibility. |
 
+### Optuna Dashboard / Optuna Optimizer
 ![Optuna Dashboard / Optuna Optimizer](img/optuna.png)
 
+### Optuna Dashboard / fcmaes Optimizer
 ![Optuna Dashboard / fcmaes Optimizer](img/fcmaes.png)
 
 ## 🛠️ Installation
