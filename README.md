@@ -72,7 +72,7 @@ pip install numpy pandas scipy optuna optuna-dashboard loguru fcmaes
 ### 1. Run the Standard Approach (Optuna)
 Good for establishing a baseline.
 ```bash
-python opt_optuna.py
+python opt_optuna_j.py
 ```
 
 ### 2. Run the Accelerated Approach (fcmaes + Journal)
@@ -85,7 +85,7 @@ python opt_fcmaes_j.py
 Launch the dashboard to watch the optimization. The custom wrapper ensures that invalid sensor positions (which return `infinity`) are marked as "Pruned" so they don't break your charts.
 
 ```bash
-# If running opt_optuna.py
+# If running opt_optuna_j.py
 optuna-dashboard optuna_journal.log
 
 # If running opt_fcmaes_j.py
