@@ -37,7 +37,7 @@ This is the core innovation of this repository. It is a custom wrapper that allo
 | `journal.py` | **The Bridge.** A custom logging wrapper that translates `fcmaes` events into Optuna Journal format. Handles `inf` pruning. |
 | `opt_optuna.py` | **Baseline Optimization.** Runs the problem using standard Optuna TPE. |
 | `opt_optuna_j.py` | **Baseline Optimization + Journal.** Runs the problem using standard Optuna TPE. |
-| `opt_fcmaes_j.py` | **Accelerated Optimization.**  Runs the problem using `fcmaes`. |
+| `opt_fcmaes.py` | **Accelerated Optimization.**  Runs the problem using `fcmaes`. |
 | `opt_fcmaes_j.py` | **Accelerated Optimization + Journal.** Runs the problem using `fcmaes` wrapped in `journal.py` for dashboard compatibility. |
 
 ### Optuna Dashboard / Optuna Optimizer
